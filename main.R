@@ -21,21 +21,12 @@ data <- rawdata %>% `colnames<-`(c("Bundesland","Bildung","Altersgruppe",
 
 for(i in 1:5){
   data[,i] <- factor(rawdata[,i],levels=meta[[i]]$code, labels = meta[[i]]$name)
-}
+  }
 
 ###### Plotdata
 
-#plotdata <- data %>% group_by(Status, Bundesland) %>%
-#  summarise(Anzahl = sum(Anzahl)) 
-
 plotdata <- data %>% group_by(Status, Bildung) %>%
   summarise(Anzahl = sum(Anzahl)) %>% subset(Bildung != 'Unbekannt')
-
-#plotdata <- data %>% group_by(Status, Altersgruppe) %>% 
-#  summarise(Anzahl = sum(Anzahl)) 
-#
-#plotdata <- data %>% group_by(Status, Erwerbsstatus) %>% 
-#  summarise(Anzahl = sum(Anzahl))
 
 ###### Plot
 
