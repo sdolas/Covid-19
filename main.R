@@ -11,7 +11,6 @@ meta.bilimst <- read.csv2(paste0(url, "OGD_covidggstatus_GGSTATUS_1_C-BILIMST-0.
 meta.altgrimst <- read.csv2(paste0(url, "OGD_covidggstatus_GGSTATUS_1_C-ALTGRIMST-0.csv"), encoding = "UTF-8")
 meta.esimst <- read.csv2(paste0(url, "OGD_covidggstatus_GGSTATUS_1_C-ESIMST-0.csv"), encoding = "UTF-8")
 meta.imst <- read.csv2(paste0(url, "OGD_covidggstatus_GGSTATUS_1_C-IMST-0.csv"), encoding = "UTF-8")
-
 rawdata <- read.csv2(paste0(url, "OGD_covidggstatus_GGSTATUS_1.csv"))
 
 # create a list of the metadata of rawdata
